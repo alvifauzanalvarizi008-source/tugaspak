@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Bahan Ajar - SITTA UT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="bkuk.jpg" alt="Logo UT" class="logo">
+                <h1>PENUGASAN SISWA</h1>
+            </div>
+            <div class="header-right">
+                <span id="greeting" class="greeting"></span>
+                <button id="logoutBtn" class="btn-secondary">Keluar</button>
+            </div>
+        </header>
+
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="stok.html" class="nav-link">Informasi Bahan Ajar</a></li>
+                <li><a href="tracking.html" class="nav-link">Tracking Status Penugasan</a></li>
+                <li><a href="laporan.html" class="nav-link active">Laporan</a></li>
+                
+                <li><a href="infolanjutan.html" class="nav-link">Info Lanjutan</a></li>
+            </ul>
+        </nav>
+        <main class="tracking-main">
+            <h2>Laporan</h2>
+            
+            <div class="laporan-form">
+                <div class="form-group">
+                    <label for="doNumber">Nomor Induk siswa</label>
+                    <input type="text" id="noInduk" name="doNumber" placeholder="Masukkan nomor induk siswa">
+                </div>
+                <button id="searchBtn" class="btn-primary">Cari</button>
+            </div>
+            
+            <div id="laporanResult" class="laporan-result">
+                <!-- Hasil pencarian akan ditampilkan di sini -->
+            </div>
+
+            <!-- Tabel Data Dummy -->
+            <div class="dummy-section">
+                <h3>Data siswa</h3>
+                <p class="subtitle">Gunakan nomor induk siswa berikut untuk melihat laporan siswa:</p>
+                
+                <table class="stock-table dummy-table">
+                    <thead>
+                        <tr>
+                            <th>Nomor Induk siswa</th>
+                            <th>Nama siswa</th>
+                            <th>Alasan</th>
+                            <th>Mapel</th>
+                            <th>Guru Pembimbing</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dummyTableBodyLaporan">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
